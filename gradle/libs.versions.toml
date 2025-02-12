@@ -5,6 +5,7 @@ coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 splashscreenversion = "1.0.1"
+dataStore = "1.1.2"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
@@ -14,6 +15,7 @@ composeBom = "2025.01.01"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 splash-screen = {group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreenversion" }
+dataStore = {group = "androidx.datastore", name = "dataStore", version.ref = "dataStore"}
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
