@@ -1,4 +1,4 @@
-package com.loc.newsapp.presentation.onboarding
+package com.example.newsapp.presentation.onBoarding
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,11 +23,12 @@ import com.example.newsapp.presentation.common.NewsButton
 import com.example.newsapp.presentation.common.NewsTextButton
 import com.example.newsapp.presentation.onBoarding.components.OnBoardingPage
 import com.example.newsapp.presentation.onBoarding.components.PagerIndicator
-import com.example.newsapp.presentation.onBoarding.pages
 import kotlinx.coroutines.launch
 
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(
+    event: (OnBoardingEvent) -> Unit
+) {
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(initialPage = 0) {
             pages.size
@@ -80,8 +81,8 @@ fun OnBoardingScreen() {
                     text = buttonsState.value[1],
                     onClick = {
                         scope.launch {
-                            if (pagerState.currentPage == 3) {
-                                //Navigate to the main screen and save a value in datastore preferences
+                            if (pagerState.currentPage == 2) {
+                                event(OnBoardingEvent.SaveAppEntry)
                             } else {
                                 pagerState.animateScrollToPage(
                                     page = pagerState.currentPage + 1
