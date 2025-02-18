@@ -31,6 +31,7 @@ fun NewsButton(
         Text(
             text = text,
             style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
+            color = Color.White
         )
     }
 }
